@@ -1025,7 +1025,7 @@ int main (int argc, char * argv[]) {
 
                         if (checkCollision (blackholeRect, spaceshipRect)) {
                             if (SDL_GetTicks() - lastHoleDamage > holeDamageInterval) {
-                                spaceship.takeDamage (1);
+                                spaceship.takeDamage (2);
                                 lastHoleDamage = SDL_GetTicks ();
                             }
                         }
