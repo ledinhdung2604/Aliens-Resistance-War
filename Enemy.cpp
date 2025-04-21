@@ -16,7 +16,7 @@ Enemy :: Enemy (int _x, int _y, int _speed, int _movingtype) {
     speed = _speed;
     movingtype = _movingtype;
     state = 0;
-    health = 30;
+    health = 10;
     alive = true;
     frameCount = 0;
     ePrevTime = 0;
@@ -29,6 +29,8 @@ Enemy :: ~Enemy () {
 }
 
 bool Enemy :: loadTexture (SDL_Renderer* gRenderer, string path) {
+    free();
+
     SDL_Texture* newTexture = NULL;
 
     SDL_Surface* loadedSurface = IMG_Load (path.c_str());
@@ -56,19 +58,22 @@ bool Enemy :: loadTexture (SDL_Renderer* gRenderer, string path) {
 }
 
 void Enemy :: free () {
-    
-    SDL_DestroyTexture (texture);
-    texture = NULL;
-
-    
+    if (texture != NULL) {
+        SDL_DestroyTexture (texture);
+        texture = NULL;
+    }
 }
 
 
 void Enemy :: update ( int SCREEN_WIDTH, int SCREEN_HEIGHT, vector <EnemyBullet> &eStorage) {
     int height = SCREEN_HEIGHT;
+
     if (!alive || isFrozen) {
-        return; // neu quai chet thi loai bo
+        
+        return; // neu quai chet hoac dong bang thi ko update j ca
     }
+
+    
     
     frameCount++; //  tăng lên 1 sau mỗi khung hình và được sử dụng để tạo hiệu ứng chuyển động mượt mà
     if (state == 0) {
@@ -164,16 +169,10 @@ void Enemy :: takedamage (int damage, double damageBoost) {
     if (health <= 0) {
         alive = false;
     }
-
-    if (alive) {
-        cooldown -= 50;
-        if (cooldown <= 500) {
-            cooldown = 500;
-        }
-    }
 }
 
 void Enemy :: buffDrop (vector <Buff*> &buffs) {
+    // 20% rơi buff
     if (rand() % 100 < 20) {
         Buff* buff = new Buff (x + 35/2 - 15, y );
         
@@ -182,9 +181,10 @@ void Enemy :: buffDrop (vector <Buff*> &buffs) {
 }
 
 bool Enemy :: FrozenOrNot () {
-    return isFrozen;
+    return isFrozen; // Kiểm tra đóng băng
 }
 
 void Enemy :: setFrozen (bool _isFrozen) {
     isFrozen = _isFrozen;
 }
+
