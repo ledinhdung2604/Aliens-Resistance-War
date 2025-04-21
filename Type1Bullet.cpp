@@ -6,18 +6,31 @@
 
 using namespace std;
 
-Type1Bullet :: Type1Bullet (int _x, int _y, double _speed) {
-    texture = NULL;
+Type1Bullet :: Type1Bullet (int _x, int _y, int spaceshipX, int spaceshipY) {
+    // Khiến boss hướng đạn đến player
     rect.x = _x;
     rect.y = _y;
-    speed = _speed;
+    texture = NULL;
+    double disX = spaceshipX - rect.x;
+    double disY = spaceshipY - rect.y;
+    double distance = sqrt (disX * disX + disY * disY);
+            
+    if (distance != 0) {
+        speedX = (disX / distance) * 15;
+        speedY = (disY / distance) * 15;
+    }
+    
 }
 
 Type1Bullet :: ~Type1Bullet () {
     free ();
 }
 
+
+
 bool Type1Bullet :: loadTexture (SDL_Renderer* gRenderer, string path) {
+    free();
+
     SDL_Texture* newTexture = NULL;
 
     SDL_Surface* loadedSurface = IMG_Load (path.c_str());
@@ -48,12 +61,16 @@ bool Type1Bullet :: loadTexture (SDL_Renderer* gRenderer, string path) {
 }
 
 void Type1Bullet :: free () {
-    SDL_DestroyTexture (texture);
-    texture = NULL;
+    if (texture != NULL) {
+        SDL_DestroyTexture (texture);
+        texture = NULL;
+    }
 }
 
 void Type1Bullet :: update () {
-    rect.y += speed;
+
+    rect.x += speedX;
+    rect.y += speedY;
 }
 
 void Type1Bullet :: render (SDL_Renderer* gRenderer) {
@@ -65,7 +82,7 @@ SDL_Rect Type1Bullet :: getRect () {
 }
 
 bool Type1Bullet :: isOutOfBorder (int SCREEN_WIDTH, int SCREEN_HEIGHT) {
-    return rect.y > SCREEN_HEIGHT;
+    return rect.x > SCREEN_WIDTH || rect.x < 0 || rect.y > SCREEN_HEIGHT;
 }
 
 void Type1Bullet :: isCollided (bool _collide) {
