@@ -23,6 +23,8 @@ Meteor :: ~Meteor () {
 }
 
 bool Meteor :: loadTexture (SDL_Renderer* gRenderer, string path) {
+    free ();
+    
     SDL_Texture* newTexture = NULL;
 
     SDL_Surface* loadedSurface = IMG_Load (path.c_str());
