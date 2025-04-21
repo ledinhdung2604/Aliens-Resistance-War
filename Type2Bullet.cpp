@@ -6,12 +6,17 @@
 
 using namespace std;
 
-Type2Bullet :: Type2Bullet (int _x, int _y, int& spaceshipX, int &spaceshipY) {
+Type2Bullet :: Type2Bullet (int _x, int _y, int spaceshipX, int spaceshipY) {
     rect.x = _x;
     rect.y = _y;
     texture = NULL;
-    double disX = spaceshipX - rect.x;
-    double disY = spaceshipY - rect.y;
+    targetX = spaceshipX;
+    targetY = spaceshipY;
+    startChase = SDL_GetTicks ();
+    isChasing = true;
+
+    double disX = targetX - rect.x;
+    double disY = targetY - rect.y;
     double distance = sqrt (disX * disX + disY * disY);
             
     if (distance != 0) {
@@ -19,15 +24,24 @@ Type2Bullet :: Type2Bullet (int _x, int _y, int& spaceshipX, int &spaceshipY) {
         speedY = (disY / distance) * 15;
     }
     
+    else {
+        speedX = 0;
+        speedY = 0;
+    }
+}
+
+void Type2Bullet :: getSpaceship (int _spaceshipX, int _spaceshipY) {
+    targetX = _spaceshipX;
+    targetY = _spaceshipY;
 }
 
 Type2Bullet :: ~Type2Bullet () {
     free ();
 }
 
-
-
 bool Type2Bullet :: loadTexture (SDL_Renderer* gRenderer, string path) {
+    free();
+
     SDL_Texture* newTexture = NULL;
 
     SDL_Surface* loadedSurface = IMG_Load (path.c_str());
@@ -58,11 +72,33 @@ bool Type2Bullet :: loadTexture (SDL_Renderer* gRenderer, string path) {
 }
 
 void Type2Bullet :: free () {
-    SDL_DestroyTexture (texture);
-    texture = NULL;
+    if (texture != NULL) {
+        SDL_DestroyTexture (texture);
+        texture = NULL;
+    }
 }
 
 void Type2Bullet :: update () {
+    Uint32 currentTime = SDL_GetTicks ();
+    Uint32 timeDiff = currentTime - startChase;
+
+    if (isChasing && timeDiff < 2000) {
+        // Khiến đạn đuổi player
+        double disX = targetX - rect.x;
+        double disY = targetY - rect.y;
+        double distance = sqrt (disX * disX + disY * disY);
+
+        if (distance > 0) {
+            double newSpeedX = (disX / distance) * 15;
+            double newSpeedY = (disY / distance) * 15;
+            speedX = 0.1 * newSpeedX + 0.9 * speedX; //lam muot chuyen dong
+            speedY = 0.1 * newSpeedY + 0.9 * speedY; // lam muot chuyen dong
+        }
+    }
+
+    else {
+        isChasing = false;
+    }
 
     rect.x += speedX;
     rect.y += speedY;
@@ -86,4 +122,8 @@ void Type2Bullet :: isCollided (bool _collide) {
 
 bool Type2Bullet :: collision (){
     return collide;
+}
+
+bool Type2Bullet :: chaseOrNot () {
+    return isChasing;
 }
