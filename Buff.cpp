@@ -10,7 +10,7 @@ Buff :: Buff (int _x, int _y) {
     random_device rd;
     mt19937 gen(rd());
     uniform_int_distribution <int> dist (0, 7);
-    type = static_cast<buffType>(dist(gen));
+    type = static_cast<buffType>(dist(gen)); // tạo loại buff ngẫu nhiên
 }
 
 Buff :: ~Buff () {
@@ -18,6 +18,8 @@ Buff :: ~Buff () {
 }
 
 bool Buff :: loadTexture (SDL_Renderer* gRenderer, string path) {
+    free();
+
     SDL_Texture* newTexture = NULL;
 
     SDL_Surface* loadedSurface = IMG_Load (path.c_str());
@@ -44,12 +46,14 @@ bool Buff :: loadTexture (SDL_Renderer* gRenderer, string path) {
 }
 
 void Buff :: free () {
-    SDL_DestroyTexture (texture);
-    texture = NULL;
+    if (texture != NULL) {
+        SDL_DestroyTexture (texture);
+        texture = NULL;
+    }
 }
 
 void Buff :: update () {
-    y += speed;
+    y += speed; // buff rơi xuống nhanh dần
     speed += 0.2;
 }
 
