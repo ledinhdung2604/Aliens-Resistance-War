@@ -10,7 +10,7 @@ using namespace std;
 class Type2Bullet {
     public:
 
-    Type2Bullet (int _x, int _y, int& spaceshipX, int& spaceshipY);
+    Type2Bullet (int _x, int _y, int spaceshipX, int spaceshipY);
     ~Type2Bullet ();
 
     void getSpaceship (int _spaceshipX, int _spaceshipY);
@@ -31,7 +31,7 @@ class Type2Bullet {
 
     bool collision ();
 
-
+    bool chaseOrNot ();
 
     private:
     SDL_Texture* texture;
@@ -39,7 +39,10 @@ class Type2Bullet {
     bool collide;
     double speedX;
     double speedY;
-    
+    int targetX; 
+    int targetY;
+    Uint32 startChase;  
+    bool isChasing;
 };
 
 #endif
