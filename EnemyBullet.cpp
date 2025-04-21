@@ -17,6 +17,8 @@ EnemyBullet :: ~EnemyBullet () {
 }
 
 bool EnemyBullet :: loadTexture (SDL_Renderer* gRenderer, string path) {
+    free ();
+
     SDL_Texture* newTexture = NULL;
 
     SDL_Surface* loadedSurface = IMG_Load (path.c_str());
@@ -60,7 +62,7 @@ void EnemyBullet :: initialize (int x, int y)  {
 }
 
 void EnemyBullet :: update () {
-    rect.y += speed;
+    rect.y += speed; // bắn xuống 
 }
 
 void EnemyBullet :: render (SDL_Renderer* gRenderer) {
