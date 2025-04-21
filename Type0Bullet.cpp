@@ -19,6 +19,8 @@ Type0Bullet :: ~Type0Bullet () {
 }
 
 bool Type0Bullet :: loadTexture (SDL_Renderer* gRenderer, string path) {
+    free ();
+    
     SDL_Texture* newTexture = NULL;
 
     SDL_Surface* loadedSurface = IMG_Load (path.c_str());
@@ -49,8 +51,10 @@ bool Type0Bullet :: loadTexture (SDL_Renderer* gRenderer, string path) {
 }
 
 void Type0Bullet :: free () {
-    SDL_DestroyTexture (texture);
-    texture = NULL;
+    if (texture != NULL) {
+        SDL_DestroyTexture (texture);
+        texture = NULL;
+    }
 }
 
 void Type0Bullet :: update () {
