@@ -7,6 +7,8 @@
 using namespace std;
 
 Type3Bullet :: Type3Bullet (int _x, int _y, int spaceshipX, int spaceshipY) {
+
+    // làm đạn bắn về hướng player
     rect.x = _x;
     rect.y = _y;
     texture = NULL;
@@ -28,6 +30,8 @@ Type3Bullet :: ~Type3Bullet () {
 
 
 bool Type3Bullet :: loadTexture (SDL_Renderer* gRenderer, string path) {
+    free();
+
     SDL_Texture* newTexture = NULL;
 
     SDL_Surface* loadedSurface = IMG_Load (path.c_str());
@@ -58,8 +62,10 @@ bool Type3Bullet :: loadTexture (SDL_Renderer* gRenderer, string path) {
 }
 
 void Type3Bullet :: free () {
-    SDL_DestroyTexture (texture);
-    texture = NULL;
+    if (texture != NULL) {
+        SDL_DestroyTexture (texture);
+        texture = NULL;
+    }
 }
 
 void Type3Bullet :: update () {
@@ -79,7 +85,7 @@ SDL_Rect Type3Bullet :: getRect () {
 bool Type3Bullet :: isOutOfBorder (int SCREEN_WIDTH, int SCREEN_HEIGHT) {
     bool hitBorder = false;
     if (rect.x > SCREEN_WIDTH || rect.x < 0 || rect.y > SCREEN_HEIGHT || rect.y < 0) {
-        if (bounceCount < 3) {
+        if (bounceCount < 4)  { // nảy 4 lần ms ra khỏi màn hình
             if (rect.x <= 0 || rect.x >= SCREEN_WIDTH - 20) {
                 speedX = -speedX;
             }
