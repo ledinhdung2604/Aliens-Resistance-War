@@ -26,6 +26,8 @@ void Bullet :: free () {
 }
 
 bool Bullet :: loadTexture (SDL_Renderer* gRenderer, std::string path) {
+    free ();
+    
     SDL_Texture* newTexture = NULL;
 
     SDL_Surface* loadedSurface = IMG_Load (path.c_str());
@@ -62,7 +64,7 @@ void Bullet :: initialize (int x, int y) {
 }
 
 void Bullet :: update (double attackSpeedUp) {
-    rect.y -= speed * attackSpeedUp;
+    rect.y -= speed * attackSpeedUp; // bắn lên trên
 }
 
 void Bullet :: render (SDL_Renderer* gRenderer) {
@@ -86,4 +88,3 @@ void Bullet :: isCollided (bool _collide) {
 bool Bullet :: collision () {
     return collide;
 }
-
