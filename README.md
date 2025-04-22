@@ -36,3 +36,11 @@ Aliens: Resistance War là một tựa game bắn tàu vũ trụ không gian 2D 
 - Hiển thị điểm số và buff đang kích hoạt (+5 điểm khi tiêu diệt enemy, +20 điểm khi tiêu diệt boss).
 - Xử lý va chạm thông minh cho đạn, địch, buff, thiên thạch, hố đen...
 - Hiệu ứng kết thúc Game Over với điểm số và hướng dẫn thao tác tiếp theo.
+
+🔽 Download & Play
+
+👉 [Click here to download the game (Windows)](https://github.com/ledinhdung2604/Aliens-Resistance-War/releases/download/v1.0/Aliens-Resistance-War.zip)
+
+1. Giải nén file `.zip`
+2. Chạy `main.exe`
+3. Play!
