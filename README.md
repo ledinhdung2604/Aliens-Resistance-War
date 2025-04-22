@@ -39,7 +39,7 @@ Aliens: Resistance War là một tựa game bắn tàu vũ trụ không gian 2D 
 
 🔽 Download & Play
 
-👉 [Click here to download the game (Windows)](https://github.com/ledinhdung2604/Aliens-Resistance-War/releases/download/v1.0/SDLTemplate.zip)
+👉 [Click here to download the game (Windows)](https://github.com/ledinhdung2604/Aliens-Resistance-War/releases/download/v1.0/Aliens-Resistance-War.zip)
 
 1. Giải nén file `.zip`
 2. Chạy `main.exe`
