@@ -1,5 +1,7 @@
 # 🌌 Aliens: Resistance War
 
+Thử nghiệm game: https://youtu.be/b14fY0vGnUs
+
 # Giới thiệu game
 Aliens: Resistance War là một tựa game bắn tàu vũ trụ không gian 2D được phát triển bằng thư viện SDL2. Người chơi sẽ vào vai một phi thuyền đơn độc chiến đấu chống lại các đợt tấn công của người ngoài hành tinh, thiên thạch, boss khổng lồ và các thế lực vũ trụ bí ẩn như hố đen.
 
