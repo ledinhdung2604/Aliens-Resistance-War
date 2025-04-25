@@ -28,6 +28,8 @@ Aliens: Resistance War là một tựa game bắn tàu vũ trụ không gian 2D 
   + ![Gameplay Preview](image/boss3.png) Boss 3: bắn 3 viên đạn đuổi player trong khoảng thời gian ngắn.
   + ![Gameplay Preview](image/boss4.png) Boss 4: bắn đạn nảy bốn lần rồi mới ra khỏi màn hình.
 - Meteor & Black Hole: Thiên thạch rơi ngẫu nhiên gây sát thương và hố đen xuất hiện định kỳ làm chậm người chơi, gây khó khăn trong di chuyển.
+  ![Gameplay Preview](image/meteor.png)
+  ![Gameplay Preview](image/blackhole.png)
 - Buff hệ thống: Tiêu diệt kẻ thù có thể rơi ra buff hỗ trợ với các hiệu ứng như:
   + HEAL: Hồi máu
   + SHIELD: Khiên bảo vệ
