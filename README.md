@@ -65,8 +65,8 @@ Aliens: Resistance War là một tựa game bắn tàu vũ trụ không gian 2D 
     
 - 📂 elements:
   + `Player: điều khiển tàu vũ trụ người chơi, xử lý buff, máu, va chạm.
-  + `Bullet / `EnemyBullet / `Type0~3Bullet: quản lý đạn của player, boss, enemy.
-  + `Enemy: kẻ địch thông thường, có di chuyển và tấn công.
+  + `Bullet` / `EnemyBullet` / `Type0~3Bullet`: quản lý đạn của player, boss, enemy.
+  + `Enemy`: kẻ địch thông thường, có di chuyển và tấn công.
   + `Boss: boss đặc biệt, nhiều loại với kiểu tấn công riêng.
   + `Meteor: thiên thạch rơi từ bốn phía.
   + `BlackHole: hố đen làm chậm player và gây sát thương.
@@ -78,36 +78,36 @@ Aliens: Resistance War là một tựa game bắn tàu vũ trụ không gian 2D 
   Xử lý tương tác giữa các thành phần
   + Va chạm giữa đạn và enemy, boss.
   + Player nhặt buff, chịu sát thương từ bullet, meteor, black hole.
-  + Hàm `spawn tạo enemy mới khi số lượng < 5.
-  + `bossSpawning sinh boss theo thời gian ngẫu nhiên.
-  + `spawnMeteor, `spawnBlackHole tạo thiên thạch và hố đen sau thời gian định sẵn.
+  + Hàm `spawn` tạo enemy mới khi số lượng < 5.
+  + `bossSpawning` sinh boss theo thời gian ngẫu nhiên.
+  + `spawnMeteor`, `spawnBlackHole` tạo thiên thạch và hố đen sau thời gian định sẵn.
   Quản lý buff
-  + `applyBuffToPlayer dùng để kích hoạt hiệu ứng buff lên player.
+  + `applyBuffToPlayer` dùng để kích hoạt hiệu ứng buff lên player.
   + Buff có thời gian hiệu lực, hiển thị chữ thông báo ngắn.
 
 - 📂 events:
   Xử lý sự kiện bàn phím và game loop chính
-  + Nhấn phím để di chuyển tàu (`handleEvent của `Player).
-  + Bắn đạn bằng phím `SPACE.
-  + Menu chọn bắt đầu chơi (`Menu), hoặc trở lại khi thua (`R để chơi lại, `Q để thoát).
+  + Nhấn phím để di chuyển tàu (`handleEvent` của `Player).
+  + Bắn đạn bằng phím `SPACE`.
+  + Menu chọn bắt đầu chơi (`Menu`), hoặc trở lại khi thua (`R` để chơi lại, `Q` để thoát).
   
   Quản lý vòng lặp game
-  + Vòng lặp chính chạy while (!quit) để xử lý mọi frame.
-  + Phân nhánh giữa hiển thị menu (`menu.menuOrGame()) và gameplay.
+  + Vòng lặp chính chạy `while (!quit)` để xử lý mọi frame.
+  + Phân nhánh giữa hiển thị menu (`menu.menuOrGame()`) và gameplay.
 
 - 📂 music:
   Xử lý âm thanh
-  + gSound: âm thanh bắn trúng.
-  + endGame: âm thanh thua cuộc.
-  + Dùng Mix_LoadWAV, Mix_PlayChannel, Mix_VolumeChunk.
+  + `gSound: âm thanh bắn trúng.
+  + `endGame: âm thanh thua cuộc.
+  + Dùng `Mix_LoadWAV`, `Mix_PlayChannel`, `Mix_VolumeChunk`.
 
 - 📂 player:
   Xử lý dữ liệu người chơi
-  + Biến playerPoint: điểm số hiện tại.
-  + Player: lớp xử lý buff, máu, sát thương, phản đạn.
+  + Biến `playerPoint`: điểm số hiện tại.
+  + `Player`: lớp xử lý buff, máu, sát thương, phản đạn.
 
-- `game.hpp  và  `game.cpp:
-  + Chứa `main() – hàm khởi tạo game, chạy vòng lặp chính, vẽ, xử lý sự kiện, kết thúc game.
+- `game.hpp`  và  `game.cpp`:
+  + Chứa `main()` – hàm khởi tạo game, chạy vòng lặp chính, vẽ, xử lý sự kiện, kết thúc game.
 
 
 # 🔽 Download & Play
