@@ -97,8 +97,8 @@ Aliens: Resistance War là một tựa game bắn tàu vũ trụ không gian 2D 
 
 - 📂 music:
   Xử lý âm thanh
-  + `gSound: âm thanh bắn trúng.
-  + `endGame: âm thanh thua cuộc.
+  + `gSound`: âm thanh bắn trúng.
+  + `endGame`: âm thanh thua cuộc.
   + Dùng `Mix_LoadWAV`, `Mix_PlayChannel`, `Mix_VolumeChunk`.
 
 - 📂 player:
