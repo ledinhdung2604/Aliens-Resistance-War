@@ -31,6 +31,7 @@ Aliens: Resistance War là một tựa game bắn tàu vũ trụ không gian 2D 
   ![Gameplay Preview](image/meteor.png)
   ![Gameplay Preview](image/blackhole.png)
 - Buff hệ thống: Tiêu diệt kẻ thù có thể rơi ra buff hỗ trợ với các hiệu ứng như:
+  ![Gameplay Preview](image/buffAppear.png)
   + HEAL: Hồi máu
   + SHIELD: Khiên bảo vệ
   + DAMAGE BOOST: Tăng sát thương
