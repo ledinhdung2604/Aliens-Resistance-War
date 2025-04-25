@@ -106,7 +106,7 @@ Aliens: Resistance War là một tựa game bắn tàu vũ trụ không gian 2D 
   + Biến playerPoint: điểm số hiện tại.
   + Player: lớp xử lý buff, máu, sát thương, phản đạn.
 
-- `game.hpp và `game.cpp:
+- `game.hpp  và  `game.cpp:
   + Chứa `main() – hàm khởi tạo game, chạy vòng lặp chính, vẽ, xử lý sự kiện, kết thúc game.
 
 
