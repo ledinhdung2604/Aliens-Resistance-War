@@ -44,8 +44,8 @@ Aliens: Resistance War là một tựa game bắn tàu vũ trụ không gian 2D 
   ![Gameplay Preview](image/endgame.png)
 
 # 3.  Tính năng khác
-- Menu mở đầu với ảnh nền và nút "Play".
 - Thanh máu động cho cả Player và Boss.
+  
 - Hiệu ứng lửa động phía dưới phi thuyền.
 - Hiển thị điểm số và buff đang kích hoạt (+5 điểm khi tiêu diệt enemy, +20 điểm khi tiêu diệt boss).
 - Xử lý va chạm thông minh cho đạn, địch, buff, thiên thạch, hố đen...
