@@ -41,6 +41,7 @@ Aliens: Resistance War là một tựa game bắn tàu vũ trụ không gian 2D 
   + FREEZE: Đóng băng enemy
   + SPEED BOOST: Tăng tốc di chuyển
 - Khi player bị tiêu diệt, người chơi có thể chọn R để tiếp tục hoặc Q để thoát.
+  ![Gameplay Preview](image/endgame.png)
 
 # 3.  Tính năng khác
 - Menu mở đầu với ảnh nền và nút "Play".
