@@ -12,6 +12,8 @@ Aliens: Resistance War là một tựa game bắn tàu vũ trụ không gian 2D 
 - Trò chơi không có hồi kết, mục tiêu của bạn là đạt điểm càng cao càng tốt.
 
 # 2. Các cơ chế chính:
+- Khi bắt đầu game: Có màn hình menu với nút start và background lấy bối cảnh ngoài không gian. Ấn vào nút Play để bắt đầu trò chơi.
+  ![Gameplay Preview](image/ARWPlayButton.png)
 - Di chuyển & Bắn: Người chơi điều khiển phi thuyền bằng các phím (A, S, D, W) hoặc các phím mũi tên và có thể bắn bằng phím Space với tốc độ di chuyển, tốc độ và sát thương đạn tùy theo buff đang hoạt động.
 - Kẻ thù: Các loại enemy di chuyển theo các quỹ đạo khác nhau và tấn công bằng đạn. Càng về sau, game sẽ có boss xuất hiện với kỹ năng và cách tấn công đặc biệt.
 - Boss Fight: Boss xuất hiện định kỳ sau mỗi 30–60 giây và có thanh máu riêng trên màn hình. Có bốn loại boss với các phương thức tấn công khác nhau:
