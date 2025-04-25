@@ -23,7 +23,7 @@ Aliens: Resistance War là một tựa game bắn tàu vũ trụ không gian 2D 
   ![Gameplay Preview](image/enemy4.png)
   ![Gameplay Preview](image/enemy5.png)
 - Boss Fight: Boss xuất hiện định kỳ sau mỗi 30–60 giây và có thanh máu riêng trên màn hình. Có bốn loại boss với các phương thức tấn công khác nhau:
-  + Boss 1: bắn loạt đạn tỏa ra các hướng với giới hạn góc 180 độ về phía dưới.
+  + ![Gameplay Preview](image/boss1.png) Boss 1: bắn loạt đạn tỏa ra các hướng với giới hạn góc 180 độ về phía dưới.
   + Boss 2: bắn đạn lớn về phía player, gây sát thương cao.
   + Boss 3: bắn 3 viên đạn đuổi player trong khoảng thời gian ngắn.
   + Boss 4: bắn đạn nảy bốn lần rồi mới ra khỏi màn hình.
