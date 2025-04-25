@@ -67,11 +67,11 @@ Aliens: Resistance War là một tựa game bắn tàu vũ trụ không gian 2D 
   + `Player: điều khiển tàu vũ trụ người chơi, xử lý buff, máu, va chạm.
   + `Bullet` / `EnemyBullet` / `Type0~3Bullet`: quản lý đạn của player, boss, enemy.
   + `Enemy`: kẻ địch thông thường, có di chuyển và tấn công.
-  + `Boss: boss đặc biệt, nhiều loại với kiểu tấn công riêng.
-  + `Meteor: thiên thạch rơi từ bốn phía.
-  + `BlackHole: hố đen làm chậm player và gây sát thương.
-  + `Fire: hiệu ứng lửa phía sau tàu.
-  + `Buff: hiệu ứng hỗ trợ (tăng tốc, hồi máu, phản đạn...).
+  + `Boss`: boss đặc biệt, nhiều loại với kiểu tấn công riêng.
+  + `Meteor`: thiên thạch rơi từ bốn phía.
+  + `BlackHole`: hố đen làm chậm player và gây sát thương.
+  + `Fire`: hiệu ứng lửa phía sau tàu.
+  + `Buff`: hiệu ứng hỗ trợ (tăng tốc, hồi máu, phản đạn...).
   + Tất cả các thành phần trên được quản lý bằng các vector và được update/render mỗi khung hình.
 
 - 📂 elements_actions:
@@ -87,7 +87,7 @@ Aliens: Resistance War là một tựa game bắn tàu vũ trụ không gian 2D 
 
 - 📂 events:
   Xử lý sự kiện bàn phím và game loop chính
-  + Nhấn phím để di chuyển tàu (`handleEvent` của `Player).
+  + Nhấn phím để di chuyển tàu (`handleEvent` của `Player`).
   + Bắn đạn bằng phím `SPACE`.
   + Menu chọn bắt đầu chơi (`Menu`), hoặc trở lại khi thua (`R` để chơi lại, `Q` để thoát).
   
