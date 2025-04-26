@@ -3,7 +3,7 @@
 Thử nghiệm game: https://youtu.be/b14fY0vGnUs
 
 # Giới thiệu game
-Aliens: Resistance War là một tựa game bắn tàu vũ trụ không gian 2D được phát triển bằng thư viện SDL2. Người chơi sẽ vào vai một phi thuyền đơn độc chiến đấu chống lại các đợt tấn công của người ngoài hành tinh, thiên thạch, boss khổng lồ và các thế lực vũ trụ bí ẩn như hố đen.
+Aliens: Resistance War là một tựa game bắn tàu vũ trụ không gian 2D được phát triển bằng thư viện SDL2. Người chơi sẽ vào vai một phi thuyền đơn độc chiến đấu chống lại các đợt tấn công của người ngoài hành tinh, thiên thạch, boss khổng lồ và các thế lực vũ trụ bí ẩn.
 
 ![Gameplay Preview](image/ARWBackground.png)
 
@@ -29,7 +29,7 @@ Aliens: Resistance War là một tựa game bắn tàu vũ trụ không gian 2D 
   + ![Gameplay Preview](image/boss2.png) Boss 2: bắn đạn lớn về phía player, gây sát thương cao.
   + ![Gameplay Preview](image/boss3.png) Boss 3: bắn 3 viên đạn đuổi player trong khoảng thời gian ngắn.
   + ![Gameplay Preview](image/boss4.png) Boss 4: bắn đạn nảy bốn lần rồi mới ra khỏi màn hình.
-- Meteor & Black Hole: Thiên thạch rơi ngẫu nhiên gây sát thương, gây khó khăn trong di chuyển.
+- Meteor: Thiên thạch rơi ngẫu nhiên gây sát thương, gây khó khăn trong di chuyển.
   ![Gameplay Preview](image/meteor.png)
 - Buff hệ thống: Tiêu diệt kẻ thù có thể rơi ra buff hỗ trợ với các hiệu ứng như:
   ![Gameplay Preview](image/buffAppear.png)
@@ -51,7 +51,7 @@ Aliens: Resistance War là một tựa game bắn tàu vũ trụ không gian 2D 
 - Hiển thị điểm số và buff đang kích hoạt (+5 điểm khi tiêu diệt enemy, +20 điểm khi tiêu diệt boss).
   ![Gameplay Preview](image/point.png.png)
   ![Gameplay Preview](image/buffDisplay.png)
-- Xử lý va chạm thông minh cho đạn, địch, buff, thiên thạch, hố đen...
+- Xử lý va chạm thông minh cho đạn, địch, buff, thiên thạch,...
 - Hiệu ứng kết thúc Game Over với điểm số và hướng dẫn thao tác tiếp theo.
 
 # 4. Về Source code:
@@ -70,7 +70,6 @@ Aliens: Resistance War là một tựa game bắn tàu vũ trụ không gian 2D 
   + `Enemy`: kẻ địch thông thường, có di chuyển và tấn công.
   + `Boss`: boss đặc biệt, nhiều loại với kiểu tấn công riêng.
   + `Meteor`: thiên thạch rơi từ bốn phía.
-  + `BlackHole`: hố đen làm chậm player và gây sát thương.
   + `Fire`: hiệu ứng lửa phía sau tàu.
   + `Buff`: hiệu ứng hỗ trợ (tăng tốc, hồi máu, phản đạn...).
   + Tất cả các thành phần trên được quản lý bằng các vector và được update/render mỗi khung hình.
