@@ -3,15 +3,15 @@
 Thử nghiệm game: https://drive.google.com/file/d/1z4jYRFalWQ0yAWDxGbnwA_87EKYjz_A_/view?usp=sharing
 
 # Giới thiệu game
-Aliens: Resistance War là một tựa game bắn tàu vũ trụ không gian 2D được phát triển bằng thư viện SDL2. Người chơi sẽ vào vai một phi thuyền đơn độc chiến đấu chống lại các đợt tấn công của người ngoài hành tinh, thiên thạch, boss khổng lồ và các thế lực vũ trụ bí ẩn.
+Aliens: Resistance War là một tựa game bắn tàu vũ trụ không gian 2D với nhịp độ nhanh và dồn dập, được phát triển hoàn toàn bằng thư viện SDL2 — một thư viện lập trình đa nền tảng phổ biến. Trong trò chơi này, bạn sẽ hóa thân thành một phi công đơn độc đang điều khiển một con tàu vũ trụ chiến đấu với tất cả những gì còn lại để sinh tồn. Kẻ thù của bạn là những thế lực ngoài hành tinh hung hãn, thiên thạch không gian chết chóc, những con boss khổng lồ sở hữu sức mạnh hủy diệt, và các hiện tượng vũ trụ kỳ bí chưa từng được biết đến.
 
 ![Gameplay Preview](image/ARWBackground.png)
 
 # 1. Gameplay:
-- Bạn là phi công cuối cùng điều khiển tàu không gian để chiến đấu và sinh tồn
-- Bắn hạ enemy và boss để tăng điểm và nhận buff hỗ trợ.
-- Đạn địch, thiên thạch, hố đen và những đòn đánh từ boss sẽ khá khó tránh, đòi hỏi phản xạ tốt.
-- Trò chơi không có hồi kết, mục tiêu của bạn là đạt điểm càng cao càng tốt.
+- Bạn sẽ vào vai người sống sót cuối cùng trong một lực lượng kháng chiến, điều khiển một chiếc tàu không gian tối tân giữa lòng vũ trụ bao la, nơi hiểm họa rình rập từ mọi phía.
+- Nhiệm vụ của bạn là bắn hạ tất cả kẻ địch, từ những con tàu nhỏ cho đến các boss khổng lồ, nhằm ghi điểm và nhận được các vật phẩm hỗ trợ quý giá giúp bạn sống sót lâu hơn.
+- Trong quá trình chơi, bạn sẽ liên tục phải đối mặt với làn đạn dày đặc từ kẻ thù, các thiên thạch rơi không ngừng, và những kỹ năng bất ngờ từ boss – tất cả đều đòi hỏi bạn phải có phản xạ nhanh nhạy và khả năng di chuyển linh hoạt.
+- Trò chơi không có kết thúc cố định; bạn sẽ chiến đấu đến khi không còn sức lực, với mục tiêu cuối cùng là đạt được số điểm cao nhất có thể.
 
 # 2. Các cơ chế chính:
 - Khi bắt đầu game: Có màn hình menu với nút start và background lấy bối cảnh ngoài không gian. Ấn vào nút Play để bắt đầu trò chơi.
@@ -110,7 +110,7 @@ Aliens: Resistance War là một tựa game bắn tàu vũ trụ không gian 2D 
   + Chứa `main()` – hàm khởi tạo game, chạy vòng lặp chính, vẽ, xử lý sự kiện, kết thúc game.
  
 # 5. Về đồ họa:
-- Toàn bộ đồ họa được lấy từ: https://opengameart.org/
+- Tất cả hình ảnh, biểu tượng, animation và hiệu ứng hình ảnh trong trò chơi được lấy từ các nguồn miễn phí tại OpenGameArt.org — đảm bảo vừa chất lượng vừa hợp lệ về bản quyền.
 
 # 🔽 Download & Play
 
